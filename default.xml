@@ -1,15 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+     Copyright 2014, NICTA
+
+     This software may be distributed and modified according to the terms of
+     the BSD 2-Clause license. Note that NO WARRANTY is provided.
+     See "LICENSE_BSD2.txt" for details.
+
+     @TAG(NICTA_BSD)
+  -->
+
 <manifest>
 
+<!-- We assume this manifest is in the same path as all the libraries. If you are
+     copying this manifest as a template then you probably want the fetch path
+     for this to be '../seL4' instead of '.' -->
 
-<remote fetch="." name="seL4" />
+<remote fetch="https://github.com/seL4" name="seL4" />
+
+<remote fetch="https://github.com/dornerworks" name="dw" />
 
 <default remote="seL4" revision="master" />
 
-<project name="seL4.git" path="kernel" revision="refs/tags/1.0.4" revision="1.0.x-compatible"/>
+<project name="seL4.git" path="kernel" revision="refs/tags/1.0.4"/>
 <project name="common-tool.git" path="tools/common" revision="1.0.x-compatible"/>
 <project name="kbuild-tool.git" path="tools/kbuild" revision="1.0.x-compatible"/>
 <project name="elfloader-tool.git" path="tools/elfloader" revision="1.0.x-compatible"/>
-<project name="musllibc.git" path="libs/libmuslc" revision="sel4" />
+<project name="musllibc.git" path="libs/libmuslc" revision="1.0.x-compatible"/>
 <project name="libsel4muslcsys.git" path="libs/libsel4muslcsys" revision="1.0.x-compatible"/>
 <project name="libsel4platsupport.git" path="libs/libsel4platsupport" revision="1.0.x-compatible"/>
 <project name="libsel4test.git" path="libs/libsel4test" revision="1.0.x-compatible"/>
@@ -24,11 +41,11 @@
 <project name="libsel4simple-stable.git" path="libs/libsel4simple-stable" revision="1.0.x-compatible"/>
 <project name="libplatsupport.git" path="libs/libplatsupport" revision="1.0.x-compatible"/>
 <project name="libutils.git" path="libs/libutils" revision="1.0.x-compatible"/>
-<project name="sel4test.git" path="projects/sel4test" revision="1.0.x-compatible">
+<project name="gdbstub-app.git" path="projects/DWRCapp" revision="master" remote="dw">
     <linkfile dest="Makefile" src="Makefile" />
     <linkfile dest="Kbuild" src="Kbuild" />
     <linkfile dest="Kconfig" src="Kconfig" />
-    <linkfile dest="configs" src="master-configs" />
+    <linkfile dest="configs" src="configs" />
     <linkfile dest="apps" src="apps" />
     <linkfile dest="libs/libsel4" src="../../kernel/libsel4" />
 </project>
