@@ -24,6 +24,7 @@ fetch="https://github.com/sel4"
 
 <remote fetch="https://github.com/sel4proj" name="sel4proj"/>
 <remote fetch="https://github.com/nanopb" name="nanopb" />
+<remote fetch="https://github.com/dornerworks" name="dornerworks" />
 
 <default revision="master"
 remote="seL4"
@@ -36,8 +37,8 @@ remote="seL4"
 <project name="sel4runtime.git" remote="sel4proj" path="projects/sel4runtime"/>
 <project name="musllibc.git" path="projects/musllibc" revision="sel4"/>
 <project name="seL4_libs.git" path="projects/seL4_libs"/>
-<project name="util_libs.git" path="projects/util_libs"/>
-<project name="sel4test.git" path="projects/sel4test">
+<project name="util_libs.git" path="projects/util_libs" remote="dornerworks" revision="polarfire-support"/>
+<project name="sel4test.git" path="projects/sel4test" remote="dornerworks" revision="polarfire-support">
     <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>
 </project>
 <project name="sel4_projects_libs" path="projects/sel4_projects_libs" remote="sel4proj" />
