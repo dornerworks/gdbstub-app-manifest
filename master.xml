@@ -17,4 +17,8 @@
 
 <project name="seL4.git" path="kernel" remote="dornerworks" revision="polarfire-support"/>
 
+<!-- also pull down the booloaders -->
+<project name="hart-software-services.git" path="tools/hart-software-services" remote="dornerworks" revision="polarfire-seL4"/>
+<project name="u-boot.git" path="tools/u-boot" remote="dornerworks" revision="polarfire-support"/>
+
 </manifest>
