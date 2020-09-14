@@ -30,7 +30,7 @@ fetch="https://github.com/sel4"
 remote="seL4"
 />
 
-<project name="seL4_tools.git" path="tools/seL4">
+<project name="seL4_tools.git" path="tools/seL4" remote="dornerworks" revision="polarfire-support">
     <linkfile src="cmake-tool/init-build.sh" dest="init-build.sh"/>
     <linkfile src="cmake-tool/griddle" dest="griddle"/>
 </project>
